@@ -9,12 +9,12 @@ const AirPollutionIndex = () => {
   const [Search, setSearch] = useState("");
   const [Data, setData] = useState([]);
 
-  const handleClick = () => {
+  const handleClick = async() => {
     if(Search !== ""){
-    axios.get(`http://api.waqi.info/feed/${Search}/?token=636824b0a15cba93f6a62ec3252407fd133d5e9a`)
-      .then((response) => {
-        setData([response.data.data]);
-      });
+    const response = await axios.get(`http://api.waqi.info/feed/${Search}/?token=636824b0a15cba93f6a62ec3252407fd133d5e9a`)
+    setData([response.data.data]);
+      
+    
     }else{
       alert('Please Enter City Name...')
     }
