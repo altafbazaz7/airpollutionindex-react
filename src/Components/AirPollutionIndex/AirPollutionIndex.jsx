@@ -11,10 +11,7 @@ const AirPollutionIndex = () => {
 
   const handleClick = () => {
     if(Search !== ""){
-      const response = axios
-      .get(
-        `http://api.waqi.info/feed/${Search}/?token=636824b0a15cba93f6a62ec3252407fd133d5e9a`
-      )
+    axios.get(`http://api.waqi.info/feed/${Search}/?token=636824b0a15cba93f6a62ec3252407fd133d5e9a`)
       .then((response) => {
         setData([response.data.data]);
       });
