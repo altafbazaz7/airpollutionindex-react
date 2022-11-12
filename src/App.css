@@ -1,0 +1,32 @@
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat Alternates', sans-serif;
+  background-color: rgba(255, 101, 45, 0.073);
+}
+
+
+.active{
+  background-color: rgb(28, 0, 92);
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  body{
+    font-size: 12px !important;
+
+  }
+  
+  nav{
+    display: none !important;
+  }
+  img{
+    display: none !important;
+  }
+
+  .lowerContainer{
+    margin-right: 100% !important;
+  }
+
+}
